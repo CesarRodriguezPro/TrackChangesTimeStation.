@@ -5,7 +5,9 @@ with open('Api_key.txt', 'r') as file_key:
     key_api = file_key.read()
 CODE = 51
 
+
 def get_data(start_date, end_date):
+
     ''' this grap the data from the website and download as a csv file and upload it in to a pandas dataframe'''
 
     raw_data = f"https://api.mytimestation.com/v0.1/reports/?api_key={key_api}" \
@@ -16,6 +18,7 @@ def get_data(start_date, end_date):
 
 def main_app(df):
 
+    ''' we use this function to analise and re-organize the information of the provide by the get_data '''
 
     dict_df = df.to_dict('index')
     list_of_employees = [x['Employee'] for x in dict_df.values()]
