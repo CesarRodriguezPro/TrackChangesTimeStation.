@@ -29,6 +29,8 @@ def main_app(df):
     print('_________________________________________________\n')
     for key, item in list_x:
         print(f'{key:25} - {item}')
+    
+    stop = input("---------------------------------------------------------------------------------------------------------")
 
 
 if __name__ == '__main__':
@@ -38,6 +40,8 @@ if __name__ == '__main__':
 
     raw_data = get_data(start_date=start, end_date=end,)
     main_app(df=raw_data)
+    
+
 
 
 
